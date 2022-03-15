@@ -1,3 +1,19 @@
+import FormCard from 'components/FormCard';
+import { useParams } from 'react-router-dom';
+
+function Form() {
+
+    const params = useParams();
+
+    return (
+        <FormCard movieId={`${params.movieId}`} />
+    );
+}
+
+export default Form;
+
+/*
+
 import { Link } from 'react-router-dom';
 import './style.css';
 
@@ -46,3 +62,4 @@ function Form() {
 }
 
 export default Form;
+*/
