@@ -20,6 +20,10 @@
 https://www.youtube.com/playlist?list=PLNuUvBZGBA8kMTSPMmmNiRm2z0gRxXxox
 
 
+Basicamente o projeto foi feito de forma resumida, porém funcional. Front end e backend connectados, sendo frontend com deploy no netify e backend com deploy feito na Nuvem Heroku.
+Para acessar o sistema entrar na URL:
+https://amelomovie.netlify.app/
+
 
 # ![DevSuperior logo](https://raw.githubusercontent.com/devsuperior/bds-assets/main/ds/devsuperior-logo-small.png) Semana Spring React - Episódio 1
 >  *Crie um app completo para seu portfólio com as tecnologias mais demandadas do mercado*
