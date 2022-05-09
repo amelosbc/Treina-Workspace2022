@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'santander-dev-week-bankline-app';
+  title = 'Bankline - Controle de Movimentacoes';
 }
