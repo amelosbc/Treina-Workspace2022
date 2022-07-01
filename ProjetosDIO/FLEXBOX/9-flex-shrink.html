@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - Flex shrink</title>
+    <style>
+
+        .flex-container{    
+            display: flex;
+            border: 2px solid black;
+            max-width: 300px;
+        }
+    
+        .items{
+                background-color: orange;
+                margin: 5px;
+                text-align: center;
+                font-size: 24px;
+                color: white;
+                
+         }
+
+         .s-01{
+             flex-shrink: 0;
+             flex-basis: 100px;
+         }
+
+         .s-1{
+             flex-shrink: 1;
+         }
+
+         .fg-1{
+             flex-grow: 1;
+         }
+
+</style>
+
+</head>
+<body>
+    <p>flex-shrink</p>
+    <div class="flex-container">
+            <div class="items s-1 fg-1">A</div>
+            <div class="items s-1 fg-1">bbbb</div>
+            <div class="items s-1 fg-1">D</div>
+            <div class="items s-1 fg-1">DEF</div>
+    </div>
+
+    <p>flex-shrink</p>
+    <div class="flex-container">
+            <div class="items s-1 fg-1">A</div>
+            <div class="items s-1 fg-1">afadsfadsfadsf</div>
+            <div class="items s-1 fg-1">D</div>
+            <div class="items s-1 fg-1">DEF</div>
+    </div>
+    <p>flex-shrink 0</p>
+    <div class="flex-container">
+            <div class="items s-0 fg-1">A</div>
+            <div class="items s-0 fg-1">faddsfasdf</div>
+            <div class="items s-0 fg-1">D</div>
+            <div class="items s-0 fg-1">DEF</div>
+    </div>
+ 
+</body>
+</html>

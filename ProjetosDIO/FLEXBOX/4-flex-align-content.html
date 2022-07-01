@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - Align contents</title>
+    <style>
+
+    .container{    
+        display: flex;
+        border: 1px solid black;
+        max-width: 300px;
+        height: 400px;
+        margin: 0 auto;
+        flex-wrap: wrap;
+        }
+
+        .item{
+            background-color: orangered;
+            margin: 5px;
+            padding: 0 5px;
+            text-align: center;
+            color: white;
+            flex: 1;
+    }
+    .stretch{
+        align-content: stretch;
+    }
+    .center{
+        align-content: center;
+    }
+    .flex-start{
+        align-content: flex-start;
+    }
+    .flex-end{
+        align-content: flex-end;
+    }    
+    .space-around{
+        align-content: space-around;
+    }
+    .space-between{
+        align-content: space-between;
+    }
+</style>
+</head>
+
+
+<body>
+        <h1>ROW</h1> 
+        <p> Stratch </p>
+        <div class="container stretch">
+            <div class="item ">lorem ipsum dolor site ree</div>
+            <div class="item ">lorem ipsum dolor site ree</div>
+            <div class="item ">3 texte dafae dafa</div>
+            <div class="item ">lorem ipsum dolor site ree</div>
+            <div class="item ">lorem ipsum dolor site ree</div>
+            <div class="item ">3 texte dafae dafa</div>
+        </div>
+ 
+        <p> Center </p>
+        <div class="container center">
+            <div class="item ">lorem ipsum dolor site ree</div>
+            <div class="item ">lorem ipsum dolor site ree</div>
+            <div class="item ">3 texte dafae dafa</div>
+            <div class="item ">lorem ipsum dolor site ree</div>
+            <div class="item ">lorem ipsum dolor site ree</div>
+            <div class="item ">3 texte dafae dafa</div>
+        </div>
+
+        <p> Flex start </p>
+        <div class="container flex-start">
+            <div class="item ">lorem ipsum dolor site ree</div>
+            <div class="item ">lorem ipsum dolor site ree</div>
+            <div class="item ">3 texte dafae dafa</div>
+            <div class="item ">lorem ipsum dolor site ree</div>
+            <div class="item ">lorem ipsum dolor site ree</div>
+            <div class="item ">3 texte dafae dafa</div>
+        </div>
+        <p> Flex end </p>
+        <div class="container flex-end">
+            <div class="item ">lorem ipsum dolor site ree</div>
+            <div class="item ">lorem ipsum dolor site ree</div>
+            <div class="item ">3 texte dafae dafa</div>
+            <div class="item ">lorem ipsum dolor site ree</div>
+            <div class="item ">lorem ipsum dolor site ree</div>
+            <div class="item ">3 texte dafae dafa</div>
+        </div>
+        <p> space-around </p>
+        <div class="container flex-around">
+            <div class="item ">lorem ipsum dolor site ree</div>
+            <div class="item ">lorem ipsum dolor site ree</div>
+            <div class="item ">3 texte dafae dafa</div>
+            <div class="item ">lorem ipsum dolor site ree</div>
+            <div class="item ">lorem ipsum dolor site ree</div>
+            <div class="item ">3 texte dafae dafa</div>
+        </div>
+        <p> space-between </p>
+        <div class="container space-between">
+            <div class="item ">lorem ipsum dolor site ree</div>
+            <div class="item ">lorem ipsum dolor site ree</div>
+            <div class="item ">3 texte dafae dafa</div>
+            <div class="item ">lorem ipsum dolor site ree</div>
+            <div class="item ">lorem ipsum dolor site ree</div>
+            <div class="item ">3 texte dafae dafa</div>
+        </div></body>
+</html>
