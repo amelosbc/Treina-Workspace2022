@@ -1,0 +1,97 @@
+<h1 class="text-success text-center">Angular Diretivas - Estudo bootcamp Santander</h1>
+
+<!-- diretivas que modificam Atributos -->
+<div 
+
+    [ngStyle] ="{background: count < 5 ? 'red': 'green'}"
+    [ngClass] = "{custom: count > 5}">
+
+    <h2 class="text-center">Contador: {{count}}</h2> 
+</div>
+
+
+<!-- diretivas estruturais -->
+<h2 *ngIf="count >7; else menor">O contador passou de 7</h2> 
+
+<ng-template #menor>
+    <h2>O contador é menor que 7</h2>
+</ng-template>
+
+<ul [ngSwitch]="count" class="list-group mx-auto col-3">
+    <li class="list-group-item" *ngSwitchCase="3">
+        É IGUAL A 3
+    </li>    
+    <li class="list-group-item" *ngSwitchCase="5">
+        É IGUAL A 5
+    </li>
+    <li class="list-group-item" *ngSwitchCase="7">
+        É IGUAL A 7
+    </li>
+    <li class="list-group-item" *ngSwitchCase="1">
+        É IGUAL A 1
+    </li>
+    <li class="list-group-item" *ngSwitchDefault="">
+        ESSE É O DEFAULT
+    </li>
+</ul>
+
+<!-- diretiva ngfor -->
+<ul class="list-group mx-auto my-3 col-3">
+ 
+    
+    <li 
+        class="list-group-item" 
+        *ngFor="let pessoa of pessoas"> 
+        O Nome da pessoa VETOR é {{pessoa.nome}} {{pessoa.sobrenome}}. 
+    </li>
+
+    <!-- TESTE para injeção de dependencia via serviços -->
+    <li         
+        class="list-group-item" 
+        *ngFor="let pessoa2 of pessoas2"> 
+        O Nome da pessoa SERVICE é {{pessoa2.firstName}} {{pessoa2.lastName}}  {{pessoa2.age}}. 
+    </li>
+
+     <!-- chamada de uma injeção de dependencia porém via seletor -->
+     <spa-list-people></spa-list-people>
+
+
+</ul>
+
+<!-- diretiva ngfor (FOR) porém via template-->
+<ul class="list-group mx-auto my-3 col-3">
+    <ng-template ngFor Let-people [ngForOf]="pessoas">
+        <li class="list-group-item">
+            <!-- O Nome da pessoa é {{people.nome}} {{people.sobrenome}}.  -->
+        </li> 
+    </ng-template>
+</ul>
+
+<!-- Typescript para a view e vice-versa -->
+<h3 class="list-group mx-auto col-3"> {{nome}} </h3>
+<button class="list-group mx-auto " (click)="clicou('AlexandreMelo')">Clique aqui</button>
+
+<!-- two way databinding  -  mostrando que ocorre a comunicação dos dois lados, view e controle-->
+<div class="col-4 mx-auto">
+    <input
+        type="text" class="form-control"
+        placeholder="Digite seu nome:"
+        [(ngModel)] = "text"
+    >
+    <h4> Saida: {{text}}</h4>
+
+</div>
+
+<!-- diretiva customizada  juntamente com o diretorio directives, criado atraves do comando: ng g d directives/marcaTexto -->
+<h3 appMarcaTexto corDeFundo="red" corDoTexto="white" class="text-center"> Diretivas customizadas </h3>
+
+<div class = "container my-5">
+    <div class="row d-flex align-items-center justify-content-center">
+    <div class="text-success text-center">
+
+        <H2 class="text-center"> LISTAGEM DE PERSONAGENS RICK AND MORTY </H2>
+        <div class="col-12">
+            <app-list-api> </app-list-api>
+        </div>
+    </div>
+</div>
