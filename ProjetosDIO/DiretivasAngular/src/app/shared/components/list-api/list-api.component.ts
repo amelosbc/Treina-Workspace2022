@@ -13,7 +13,7 @@ export class ListApiComponent implements OnInit {
   ngOnInit(): void {
     this.getList();
   }
-
+/*
   getList(){  
     this.listService.getList().subscribe(result => {
       this.personagens =  <any[]> result;
@@ -24,5 +24,12 @@ export class ListApiComponent implements OnInit {
         console.log("Lista de personagens via API:" + this.personagens);
       }
     })
+  } */
+  getList() {
+    this.listService.getList().subscribe(result => {
+      this.personagens = result?.results;
+      console.log(this.personagens);
+    })
   }
+
 }

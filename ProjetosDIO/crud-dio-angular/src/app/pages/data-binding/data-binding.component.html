@@ -1,0 +1,36 @@
+<p>data-binding works!</p>
+
+<!-- interpolação -->
+<h1>DataBinding por interpolação</h1>
+<h2>chamada de função do componente, retorno: {{ retornaNome()}}</h2>
+<h2>DataBinding por interpolação - chamada da variável do componente, retorno: {{ text }}</h2>
+
+<!-- PROPERTY BINDING -->
+<p></p>
+<h1>DataBinding por propriedade</h1>
+<img [src]="imgURL" [alt]="descIMG" (click)="clicouAlgo()">
+
+<p> </p>
+<button (click)="clicouAlgo()">Clique aqui</button>
+
+<p>
+</p>
+<input #input (keyup)="clicou(input.value)">
+{{clicou(input.value)}}
+
+<!-- DATA BINDING DE ATRIBUTO-->
+<p></p>
+<h1>DataBinding por ATRIBUTO</h1>
+<button [attr.aria-label]="buttonText">{{ buttonText }}</button>
+
+<!-- DATA BINDING DE CLASSES-->
+<p></p>
+<h1>DataBinding por CLASSES</h1>
+<h1 [class.textred]="textRed">DataBinding por interpolação - chamada de função do componente, retorno: {{ retornaNome()}}</h1>
+
+
+<!-- DATA BINDING DE two-way altera os dados da view e do componente ao mesmo tempo -->
+<p></p>
+<h1>DataBinding por TWO-WAY</h1>
+<input type="text" class="form-control" [(ngModel)]="textInput">
+<p class="text-default"> {{ textInput }}</p>

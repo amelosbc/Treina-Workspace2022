@@ -1,0 +1,20 @@
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { DataBindingComponent } from './pages/data-binding/data-binding.component';
+import { TodoListComponent } from './pages/todo-list/todo-list.component';
+import { UsersFormComponent } from './pages/users/users-form/users-form.component';
+import { UsersListComponent } from './pages/users/users-list/users-list.component';
+
+const routes: Routes = [
+  {path: '', component: UsersListComponent},
+  {path: 'form', component: UsersFormComponent},
+  {path: 'form/:id', component: UsersFormComponent},
+  {path: 'data-binding', component: DataBindingComponent},
+  {path: 'todo-list', component: TodoListComponent},
+];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }
