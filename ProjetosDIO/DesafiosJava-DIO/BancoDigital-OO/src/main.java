@@ -1,4 +1,4 @@
-package desafio.dio;
+package src.bancodigitaloo;
 
 import java.util.Random;
 import java.util.Scanner;

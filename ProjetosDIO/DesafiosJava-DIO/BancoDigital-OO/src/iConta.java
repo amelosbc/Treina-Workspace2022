@@ -1,4 +1,4 @@
-package desafio.dio;
+package src.bancodigitaloo;
 
 public interface iConta {
    void sacar(double valor);

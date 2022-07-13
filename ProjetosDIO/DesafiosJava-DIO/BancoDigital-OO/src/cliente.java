@@ -1,4 +1,4 @@
-package desafio.dio;
+package src.bancodigitaloo;
 
 public class cliente {
     private String nome;
