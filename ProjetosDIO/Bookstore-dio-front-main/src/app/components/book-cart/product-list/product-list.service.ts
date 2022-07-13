@@ -17,7 +17,7 @@ export const books: Book[] = [
 
 export class BooksService {
 
-  private url = 'https://localhost:44382/api/bookstore';  // URL to web api
+  private url = 'http://localhost:3100/api/products';  // URL to web api
 
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -26,12 +26,12 @@ export class BooksService {
    constructor( private httpclient: HttpClient){}
 
 
-     getBooks(){
-        return books;
-     }
+     //getBooks(){
+       // return books;
+     //}
 
-    //getBooks() {
-      //return this.httpclient.get(this.url)
-    //}
+    getBooks() {
+      return this.httpclient.get(this.url)
+    }
 
 }
